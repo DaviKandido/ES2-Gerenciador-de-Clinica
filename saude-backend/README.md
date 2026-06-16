@@ -76,3 +76,4 @@ mvn test
 |----------|-----------|
 | `DATABASE_URL` | URL de conexão PostgreSQL (preenchida automaticamente pelo Render) |
 | `PORT` | Porta da aplicação (padrão: 8080) |
+# teste
