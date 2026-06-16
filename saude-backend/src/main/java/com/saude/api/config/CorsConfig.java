@@ -14,13 +14,17 @@ public class CorsConfig {
     @Bean
     public CorsFilter corsFilter() {
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowedOriginPatterns(List.of("*"));
+        
+        config.setAllowedOrigins(List.of("https://es2-gerenciador-de-clinica-1.onrender.com"));
+        
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowedHeaders(List.of("*"));
         config.setAllowCredentials(true);
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-        source.registerCorsConfiguration("/api/**", config);
+        
+        source.registerCorsConfiguration("/**", config);
+        
         return new CorsFilter(source);
     }
 }
