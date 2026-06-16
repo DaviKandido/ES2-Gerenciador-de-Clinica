@@ -6,7 +6,7 @@ services:
     staticPublishPath: ./dist
     envVars:
       - key: VITE_API_URL
-        value: https://saude-api.onrender.com/api
+        value: https://es2-gerenciador-de-clinica.onrender.com
     routes:
       - type: rewrite
         source: /*
