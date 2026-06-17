@@ -43,6 +43,6 @@ public class GlobalExceptionHandler {
         ex.printStackTrace();
         
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                .body(new ErrorResponse(500, "Erro interno do servidor", LocalDateTime.now()));
+                .body(new ErrorResponse(500, "Erro interno do servidor + " + ex.getMessage(), LocalDateTime.now()));
     }
 }
